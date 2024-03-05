@@ -5,7 +5,7 @@ SELECT
     s.revenue, 
     s.quantity,
     purchse_price, 
-    CAST(purchse_price AS FLOAT64 ), 
+    CAST(purchse_price AS FLOAT64 )AS purchase_price, 
     ROUND(s.quantity*CAST(purchse_price AS FLOAT64 ),2) AS purchase_cost,
     s.revenue - ROUND(s.quantity*CAST(purchse_price AS FLOAT64 ),2) AS margin
 FROM {{ref("stg_raw__sales")}} s
