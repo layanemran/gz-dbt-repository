@@ -9,7 +9,7 @@ source as (
 renamed as (
 
     select
-        pdt_id as products_id
+        products_id,
         purchse_price
 
     from source
